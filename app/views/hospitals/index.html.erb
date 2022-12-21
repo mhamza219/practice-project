@@ -1,0 +1,13 @@
+<h1>Hospital Details<h1><br>
+
+	<%= link_to "create new hospital", new_hospital_path %>
+
+	<% @hospitals.each do |hospital| %>
+	<%= hospital.patient_name %>
+	<%= hospital.blood_group %>
+	<%= hospital.age %>
+	<%= hospital.address %>
+		<%= link_to "show", hospital_path(hospital) %>
+		<%= link_to "edit", edit_hospital_path(hospital) %>
+		<%= link_to "Delete", hospital, method: :delete, data: {confirm: "are you sure"}%>
+	<%end%>

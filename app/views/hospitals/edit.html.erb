@@ -1,0 +1,11 @@
+<%= form_for @hospital do |form| %>
+	<%= form.label :patient_name %>
+	<%= form.text_field :patient_name %>
+	<%= form.label :blood_group %>
+	<%= form.text_field :blood_group %>
+	<%= form.label :age %>
+	<%= form.number_field :age %>
+	<%= form.label :address %>
+	<%= form.text_field :address %>
+	<%=form.submit%>
+	<%end%>

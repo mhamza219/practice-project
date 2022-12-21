@@ -1,0 +1,16 @@
+<br>
+
+  <%= link_to "Create School", new_school_path %><br><br>     
+
+
+  <% @schools.each do |school| %> 
+  <!-- <div class= "Jumbotron"> -->
+    <%= school.name %>
+    <%#= electronic_good.price %>
+    <%#= electronic_good.delivery_address %>
+    <%#= electronic_good.pincode %>
+    <%= link_to "show", school_path(school) %>
+    <%= link_to "edit", edit_school_path(school) %>
+    <%= link_to "delete", school, method: :delete, data: {confirm: "are you sure"}%><br> 
+  <!-- </div> -->
+  <%end%>

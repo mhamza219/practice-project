@@ -1,0 +1,10 @@
+<br><br>
+
+<%= link_to "Create New Blog", new_blog_path %>
+<% @blogs.each do |blog| %>
+<%= blog.name %>
+<%= blog.description %>
+<%= link_to "edit", edit_blog_path(blog) %>
+<%= link_to "show", blog_path(blog)%>
+<%= link_to "delete", blog, method: :delete, data:{comfirm: "Are You Sure"}%>
+<%end%>

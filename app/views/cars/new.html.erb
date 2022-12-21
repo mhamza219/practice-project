@@ -1,0 +1,10 @@
+<h1>Create cars<h1>
+	<%= form_for@car do |form| %>
+	<%= form.label :name %>
+	<%= form.text_field :name %>
+	<%= form.label :description %>
+	<%= form.text_area :description %>
+	<%= form.label :price %>
+	<%= form.number_field :price %>
+	<%= form.submit %>
+	<% end %>

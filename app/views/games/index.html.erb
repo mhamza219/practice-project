@@ -1,0 +1,16 @@
+<br>
+<h2><mark>
+  <%= link_to "Create game", new_game_path %><br><br></h2></mark>    
+
+
+  <% @games.each do |game| %> 
+  <!-- <div class= "Jumbotron"> -->
+    <%= game.name %>
+    <%#= electronic_good.price %>
+    <%#= electronic_good.delivery_address %>
+    <%#= electronic_good.pincode %>
+    <%= link_to "show", game_path(game) %>
+    <%= link_to "edit", edit_game_path(game) %>
+    <%= link_to "delete", game, method: :delete, data: {confirm: "are you sure"}%><br> 
+  <!-- </div> -->
+  <%end%>

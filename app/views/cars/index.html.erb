@@ -1,0 +1,10 @@
+<h1>List Of Cars</h1>
+<%= link_to "new car", new_car_path %>
+<% @cars.each do |car| %>
+<%= car.name %>
+<%= car.description %>
+<%= car.price %>
+	<%= link_to "show", car_path(car) %>
+	<%= link_to "edit", edit_car_path(car) %>
+	<%= link_to "Destroy", car, method: :delete, data: {confirm: "are you sure"} %>
+<%end%>

@@ -1,0 +1,16 @@
+<br>
+
+	<%= link_to "Create New Goods Item", electronic_goods_new_path %><br><br>     
+
+
+	<% @electronic_goods.each do |electronic_good| %> 
+	<!-- <div class= "Jumbotron"> -->
+		<%= electronic_good.name %>
+		<%#= electronic_good.price %>
+		<%#= electronic_good.delivery_address %>
+		<%#= electronic_good.pincode %>
+		<%= link_to "show", electronic_good_show_path(electronic_good) %>
+		<%= link_to "edit", edit_path(electronic_good) %>
+		<%= link_to "delete", electronic_good_path(electronic_good) , method: :delete, data: {confirm: "are you sure"}%><br> 
+	<!-- </div> -->
+	<%end%>

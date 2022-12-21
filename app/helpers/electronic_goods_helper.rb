@@ -1,0 +1,2 @@
+module ElectronicGoodsHelper
+end
